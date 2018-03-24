@@ -41,7 +41,10 @@ let Player = function(x, y) {
 };
 
 Player.prototype.update = function() {
-
+  if (this.y === -11) {
+    player.reset();
+    console.log('you won!');
+  }
 };
 
 Player.prototype.reset = function() {
@@ -71,6 +74,7 @@ Player.prototype.handleInput = function(key) {
 // Place the player object in a variable called player
 let player = new Player(202, 404);
 let allEnemies = [];
+player.update();
 
 // Add the new enemy to the allEnemies array
 for (var i = 1; i < 5; i++) {
