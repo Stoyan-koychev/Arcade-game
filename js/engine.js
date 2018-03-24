@@ -92,6 +92,10 @@ var Engine = (function(global) {
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
+            if (player.y - enemy.y == 10 && player.x < enemy.x + 75 && player.x + 75 > enemy.x) {
+              console.log('collision');
+              player.reset();
+            }
         });
         player.update();
     }
