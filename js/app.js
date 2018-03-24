@@ -77,7 +77,7 @@ let allEnemies = [];
 player.update();
 
 // Add the new enemy to the allEnemies array
-for (var i = 1; i < 5; i++) {
+for (var i = 1; i < 4; i++) {
   var enemy = new Enemy(-101, (i * 83) - 21);
   allEnemies.push(enemy);
 }
