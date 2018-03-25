@@ -89,6 +89,8 @@ var Engine = (function(global) {
      * the data/properties related to the object. Do your drawing in your
      * render methods.
      */
+     // goes through all enemies to check if there is
+     // a collision then call the reset method
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);

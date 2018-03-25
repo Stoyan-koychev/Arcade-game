@@ -20,6 +20,7 @@ Enemy.prototype.update = function(dt) {
     // all computers.
     this.x = this.x + (dt * this.speed);
 
+    //check if the bug is off the canvas and move it to the start
     if (this.x > 600){
     this.x = 0 - Math.random() * 177;
     }
@@ -40,13 +41,15 @@ let Player = function(x, y) {
   this.y = y;
 };
 
+
 Player.prototype.update = function() {
   if (this.y === -11) {
     player.reset();
-    console.log('you won!');
+    alert('you won!');
   }
 };
 
+//Reset the position of the player
 Player.prototype.reset = function() {
   this.x = 202;
   this.y = 404;
