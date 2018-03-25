@@ -44,7 +44,7 @@ let Player = function(x, y) {
 
 Player.prototype.update = function() {
   if (this.y === -11) {
-    player.reset();
+    this.reset();
     alert('you won!');
   }
 };
